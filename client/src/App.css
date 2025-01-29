@@ -1,0 +1,145 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+/* Make sure body and html take full screen and center content */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent unwanted horizontal scrolling */
+  background-color: #f4f4f4; /* Light background */
+  margin: 0; /* Remove default margin */
+  display: flex;
+  flex-direction: column;
+}
+
+/* App container should take full width and height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full height */
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #4e5d6c, #343a40); /* Gradient background */
+  padding: 20px 40px;
+  color: white;
+  width: 100%;
+  position: fixed; /* Fix navbar at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Make sure it stays on top */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.navbar h1 {
+  font-size: 32px;
+  font-weight: 600; /* Make it bold */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link .btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+.nav-link .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Hover shadow */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 180px 20px;  /* Increased padding for more emphasis */
+  background: linear-gradient(135deg, #4e5d6c, #343a40); /* Matching gradient */
+  color: white;
+  width: 100%;  /* Full width */
+  margin-top: 80px;  /* Add margin to avoid overlap with navbar */
+  border-bottom: 5px solid #fff; /* Bottom border for extra style */
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  letter-spacing: 1px; /* Letter spacing for style */
+}
+
+.hero p {
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: 300; /* Lighter font weight */
+}
+
+/* Main Content */
+.main-content {
+  padding: 40px 20px;
+  background-color: #fff;
+  width: 100%; /* Full width */
+  text-align: center;
+  margin-top: 20px; /* Ensure there’s space below hero section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card effect */
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  margin-top: auto; /* Push footer to bottom */
+  border-top: 5px solid #fff; /* Top border for styling */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 100px 15px; /* Adjusted for smaller screens */
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .nav-link .btn {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 16px;
+  }
+}
