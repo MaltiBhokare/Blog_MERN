@@ -48,7 +48,7 @@ const AddPost = () => {
         formData.append("description", description);
 
         try {
-            const response = await axios.post("http://localhost:5000/api/posts", formData, {
+            const response = await axios.post("https://blog-mern-api-eta.vercel.app/api/posts", formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
 
