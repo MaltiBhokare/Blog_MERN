@@ -10,7 +10,7 @@ const PostList = () => {
 
     // Fetch posts when the component is mounted
     useEffect(() => {
-        axios.get("http://localhost:5000/api/posts")
+        axios.get("https://blog-mern-api-eta.vercel.app/api/posts")
             .then((response) => setPosts(response.data))
             .catch((error) => console.error("Error fetching posts:", error));
     }, []);
