@@ -15,7 +15,16 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.send('Welcome to the API!');
   });
-  
+
+
+// CORS Configuration
+const corsOptions = {
+  origin: "https://blog-mern-client.vercel.app", // Your frontend domain
+  methods: "GET,POST,PUT,DELETE", // Allow specific HTTP methods
+  allowedHeaders: "Content-Type,Authorization", // Allow specific headers
+};
+
+app.use(cors(corsOptions));
 
 // MongoDB Connection (Explicitly connecting to 'test' database)
 mongoose.connect(process.env.MONGO_URI + "/test")
